@@ -1,0 +1,28 @@
+{
+  "name": "medapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "medapp.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.8",
+    "mustache-express": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nodemon -e js,mustache ./medapp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/branderso87/medapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/branderso87/medapp/issues"
+  },
+  "homepage": "https://github.com/branderso87/medapp#readme"
+}
