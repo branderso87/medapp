@@ -1,0 +1,39 @@
+{
+  "name": "Users",
+  "plural": "Users",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "dob": {
+      "type": "date",
+      "required": true
+    },
+    "emailAddress": {
+      "type": "string",
+      "required": true
+    },
+    "memberId": {
+      "type": "number"
+    },
+    "cardholder": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
