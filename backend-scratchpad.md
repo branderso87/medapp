@@ -35,3 +35,10 @@ Google bluemix cli
 bx app push
 
 Google loopback-in-5-minutes
+
+Relations
+
+// need to create table for Users that is parent to Medications table
+// Doctors table with Users(patients) as children.
+// Doctors table will have special permissions and access and views
+// Users table will have the following columns: firstName, lastName, dob, emailAddress, memberId, cardholder(boolean), medicationId(foreignKey), medNickname?(maybe), 
