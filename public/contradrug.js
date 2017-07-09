@@ -10,5 +10,9 @@ fetch(`https://rxnav.nlm.nih.gov/REST/rxcui.json?name=omeprazole`) // use QueryS
   }).then(function (contra) {
       var contraDrug = contra.interactionTypeGroup[0].interactionType[0].interactionPair[0].description;
       console.log(contraDrug);
+      injectHTML(contraDrug);
+      function injectHTML(html){
+        document.querySelector(".contraindicator-1").insertAdjacentHTML('afterbegin', html);
+      }
   })
 })
