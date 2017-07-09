@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign Up</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="signup-screen-wrapper">
+            <div class="login-bkgd-overlay"></div>
+            <div class="login-box">
+                <img src="images/express-scripts.png">
+                <h1 class="login">Create an Account</h1>
+            </div>
+        </div>
+
+        <div class="signup-box">
+            <form>
+                <label>First Name</label>
+                <input type="text">
+                <label>Last Name</label>
+                <input type="text">
+                <label>Your Email</label>
+                <input type="email">
+                <label>Date of Birth</label>
+                <input type="date">
+                <label>Member ID</label>
+                <input type="number">
+                <label>I am the:</label>
+                <input class="radio" type="radio" name="status" value="member" checked> Member (Cardholder)<br>
+                <input class="radio" type="radio" name="status" value="spouse"> Spouse<br>
+                <input class="radio" type="radio" name="status" value="dependent"> Adult Dependent<br>
+                <input class="radio" type="radio" name="status" value="partner"> Domestic Partner
+                <label>Password</label>
+                <input type="password">
+                <label>Confirm Password</label>
+                <input type="password">
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="other-link">
+                <a href="login.html" style="color:#000;">Already have an account? Login!</a>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,229 @@
+* { box-sizing: border-box; margin: 0 auto; }
+img {   max-width: 100%; }
+
+body {
+    margin:0;
+    font-family: 'roboto';
+}
+
+/* LOGIN/SIGN UP
+------------------------------------------------------- */
+
+.login-screen-wrapper {
+    width:100%;
+    height:100vh;
+    background:url('images/login.jpg');
+    background-size: cover;
+    background-position: right;
+}
+
+.login-bkgd-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(34, 80, 95, 0.87);
+}
+
+h1.login {
+    margin:0;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.login-box {
+    text-align: center;
+    padding-top: 15vh;
+    width:80%;
+    margin:0 10%;
+    position: relative;
+}
+
+.login-box input, .login-box button {
+    display: block;
+    width:100%;
+    margin: 13px 0;
+    box-sizing: border-box;
+}
+
+.login-box button, .signup-box button {
+    margin:auto;
+    background: #FFA64B;
+    color: #fff;
+    border:none;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:15px 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-box input {
+    padding:8px;
+    font-size: 18px;
+}
+
+.other-link a {
+    color: #fff;
+    opacity: 0.6;
+    margin-top:20px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.other-link a:hover {
+    opacity: 1.0;
+}
+
+@media only screen and (max-width:720px) {
+    .login-screen-wrapper {
+        background-image:url('images/login-mobile.jpg');
+    }
+}
+
+@media only screen and (min-width:720px) {
+    .login-box {
+        width:40%;
+        margin:0 30%;
+    }
+
+    .signup-screen-wrapper .login-box {
+        width:90%;
+        margin:0 10%;
+    }
+}
+
+.signup-screen-wrapper {
+    width:100%;
+    height:auto;
+    background:url('images/login.jpg');
+    background-size: cover;
+    background-position: right;
+    position: relative;
+}
+
+.signup-screen-wrapper .login-box {
+    position: relative;
+    padding-top:60px;
+    padding-bottom: 15px;
+}
+
+.signup-box {
+    width:90%;
+    margin:0 5%;
+}
+
+.signup-box input, .signup-box label, .signup-box button {
+    display: block;
+    width:100%;
+    margin: 13px 0;
+    box-sizing: border-box;
+}
+
+.signup-box input {
+    margin:5px 0 0 0;
+    border: solid 1px #222;
+    padding:8px;
+    font-size: 18px;
+}
+
+.signup-box label {
+    margin:20px 0 0 0;
+    font-weight: 700;
+}
+
+.login-box img {
+    width:100%;
+    max-width:500px;
+}
+
+.login-box input.radio, .signup-box input.radio {
+    display: inline-block;
+    width:auto;
+}
+
+
+/* HOME
+------------------------------------------------------- */
+
+.header {
+    display: block;
+    position: relative;
+    width:100%;
+    background:#fff;
+}
+
+.logo {
+    position: relative;
+    max-height: 50px;
+}
+
+.navigation {
+    float: left;
+}
+
+
+/*brittany*/
+nav {
+  display: flex;
+    background-color:#14568D;
+    height: 12em;
+    width: 100%;
+        justify-content: flex-end;
+
+}
+.iconList {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+      margin: 0;
+}
+
+.icon {
+  display: flex;
+height: 100px;
+width: 100px;
+background-color: #40ACDC;
+border-radius: 50%;
+margin: 2em;
+}
+
+.medication {
+border: 1px solid black;
+width: 50em;
+height: 20em;
+margin-top: 6em;
+}
+
+.drugName {
+  font-size: 60px;
+}
+
+.drugInfo {
+  font-size: 40px;
+}
+
+.medicationCalendarScroll {
+display: flex;
+flex-direction: row;
+overflow: auto;
+white-space: nowrap;
+}
+
+.daysOfWeek {
+  font-size: 200px;
+  display: inline-block;
+  padding: 10%;
+}
+
+.daysOfWeek a {
+  text-decoration: none;
+  color: black;
+}
+
+/*Settings*/
