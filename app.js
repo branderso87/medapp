@@ -49,6 +49,10 @@ app.get("/login", function(req,res) {
 
   res.render('login')
 })
+app.get("/userprofile", function(req,res) {
+
+  res.render('user-profile')
+})
 
 app.get("/signup", function(req,res) {
 
@@ -58,6 +62,16 @@ app.get("/signup", function(req,res) {
 app.get("/userprofile",function(req,res){
 
   res.render('user-profile')
+})
+
+app.post("/userprofile",function(req,res){
+
+  res.render('user-profile')
+})
+
+app.get("/addmedication",function(req,res){
+
+  res.render('addmedication')
 })
 
 app.get("/settings",function(req,res){
@@ -71,6 +85,6 @@ app.get("/doctorsview",function(req,res){
 })
 
 app.post("/doctorsSearch", function(req,res) {
-  
+
   res.render('doctorsview')
 })

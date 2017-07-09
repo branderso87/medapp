@@ -291,6 +291,11 @@ a.register-button {
     font-size: 15px;
     text-decoration: none;
     box-sizing: border-box;
+    background: rgb(38,126,181);
+    background: -moz-linear-gradient(left, rgba(38,126,181,1) 0%, rgba(64,172,220,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
+    background: linear-gradient(to right, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', endColorstr='#40acdc',GradientType=1 );
 }
 
 .SettingsHeader {
@@ -378,10 +383,10 @@ a.register-button {
     padding:10px;
     box-shadow: 0 1px 12px 2px rgba(0,0,0,0.4);
     background: rgb(38,126,181);
-background: -moz-linear-gradient(left, rgba(38,126,181,1) 0%, rgba(64,172,220,1) 100%);
-background: -webkit-linear-gradient(left, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
-background: linear-gradient(to right, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', endColorstr='#40acdc',GradientType=1 );
+    background: -moz-linear-gradient(left, rgba(38,126,181,1) 0%, rgba(64,172,220,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
+    background: linear-gradient(to right, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', endColorstr='#40acdc',GradientType=1 );
 }
 
 .header-bar ul {
@@ -394,7 +399,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     display: inline-block;
 }
 
-.header-bar li a {
+.header-bar > ul li a {
     padding:13px 25px;
     border-radius: 50px;
     background:rgba(255,255,255,0.1);
@@ -408,7 +413,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     transition: all ease 0.3s;
 }
 
-.header-bar li a:hover {
+.header-bar > ul li a:hover {
     background: rgba(255,255,255,0.3);
 }
 
@@ -461,7 +466,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     padding: 15px 0;
 }
 
-.header-bar li a.profile {
+.header-bar > ul li a.profile {
     background-image: url(images/grandma-mobile.jpg)!important;
     background-size: cover!important;
     box-sizing: border-box;
@@ -549,6 +554,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     color: rgba(255,255,255,0.8);
 }
 
+.submenu {
+    position: absolute;
+    right: 0;
+    background: #fff;
+    padding-top: 61px;
+}
+
+.header-bar ul.submenu li {
+    display: block;
+    color: #000;
+}
+
+.header-bar ul.submenu li a {
+    display: block;
+    color: #000;
+    text-align: left;
+    padding: 13px;
+    width: 150px;
+    background: rgba(0,0,0,0.0);
+    border-radius: 0!important;
+}
+
+.header-bar ul.submenu li a:hover {
+    display: block;
+    color: #000;
+    text-align: left;
+    padding: 13px;
+    width: 150px;
+    background: rgba(0,0,0,0.08);
+}
+
+.profile-list-item ul {
+    display: none;
+}
+
+.profile-list-item:hover ul {
+    display: block;
+}
+
 @media only screen and (max-width:980px) {
     #medications-section {
         width: 100%;
@@ -579,4 +623,85 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     #profile-section {
         display: none;
     }
+}
+
+
+
+/* DOCTOR PROFILE
+------------------------------------------------------- */
+
+.header-bar li {
+    color: #fff;
+}
+
+.header-bar li a.profile.doctor {
+    background-image: url(images/doctor.jpg)!important;
+    display: inline-block;
+}
+
+#doctor-wrapper {
+    max-width: 800px;
+    padding:15px 20px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#nav-list ul {
+    text-align: center;
+    padding: 0;
+}
+
+#nav-list li {
+    display: inline-block;
+    width: 29%;
+    padding:10px;
+    background:rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+#nav-list li:hover {
+    background:rgba(0,0,0,0.2);
+}
+
+#nav-list li.active {
+    background:#FFA64B;
+    color: #fff!important;
+}
+
+#patientSearchForm {
+    text-align: center;
+}
+
+#patientSearchForm input {
+    width:70%;
+    border:solid 2px #ddd;
+}
+
+#patientSearchForm button {
+    width:20%;
+    border:solid 2px rgba(0,0,0,0.0);
+    background:#40ACDC;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 1.0;
+    transition: all ease 0.3s;
+}
+
+#patientSearchForm button:hover {
+    opacity: 0.8;
+}
+
+#patientSearchForm input, #patientSearchForm button {
+    padding:10px;
+    outline: none;
+}
+
+.info-section {
+    display: none;
+}
+
+.info-section.active {
+    display: block;
 }
