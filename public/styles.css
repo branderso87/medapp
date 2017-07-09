@@ -12,7 +12,7 @@ body {
 .login-screen-wrapper {
     width:100%;
     height:100vh;
-    background:url('images/login.jpg');
+    background:url('images/grandma.jpg');
     background-size: cover;
     background-position: right;
 }
@@ -27,7 +27,7 @@ body {
 h1.login {
     margin:0;
     color: #fff;
-    font-size: 45px;
+    font-size: 65px;
     font-weight: 300;
     margin-bottom: 15px;
 }
@@ -80,28 +80,10 @@ h1.login {
     opacity: 1.0;
 }
 
-@media only screen and (max-width:720px) {
-    .login-screen-wrapper {
-        background-image:url('images/login-mobile.jpg');
-    }
-}
-
-@media only screen and (min-width:720px) {
-    .login-box {
-        width:40%;
-        margin:0 30%;
-    }
-
-    .signup-screen-wrapper .login-box {
-        width:90%;
-        margin:0 10%;
-    }
-}
-
 .signup-screen-wrapper {
     width:100%;
     height:auto;
-    background:url('images/login.jpg');
+    background:url('images/grandma.jpg');
     background-size: cover;
     background-position: right;
     position: relative;
@@ -147,83 +129,454 @@ h1.login {
     width:auto;
 }
 
+@media only screen and (max-width:720px) {
+    .login-screen-wrapper {
+        background-image:url('images/grandma-mobile.jpg');
+    }
+}
+
+@media only screen and (min-width:720px) {
+    .login-box, .signup-box {
+        width:40%;
+        margin:0 30%;
+    }
+
+    .signup-screen-wrapper .login-box {
+        width:90%;
+        margin:0 5%;
+    }
+}
+
 
 /* HOME
 ------------------------------------------------------- */
 
-.header {
-    display: block;
-    position: relative;
-    width:100%;
-    background:#fff;
-}
-
-.logo {
-    position: relative;
-    max-height: 50px;
-}
-
-.navigation {
-    float: left;
-}
-
-
-/*brittany*/
-nav {
-  display: flex;
-    background-color:#14568D;
-    height: 12em;
+#main-header {
     width: 100%;
-        justify-content: flex-end;
-
-}
-.iconList {
-  display: flex;
-    flex-direction: row;
-    align-items: center;
-      margin: 0;
+    margin: 0;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
-.icon {
-  display: flex;
-height: 100px;
-width: 100px;
-background-color: #40ACDC;
-border-radius: 50%;
-margin: 2em;
+#main-header h3 {
+    text-align:center;
+    color:rgba(34, 80, 95, 1.0);
 }
 
-.medication {
-border: 1px solid black;
-width: 50em;
-height: 20em;
-margin-top: 6em;
+.main-content {
+    background:url('images/grandma.jpg');
+    background-position: right;
+    background-size: cover;
+    padding: 100px 0 50px;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.drugName {
-  font-size: 60px;
+.title {
+    position: relative;
+    width:80%;
+    margin:0 10%;
+    text-align: center;
 }
 
-.drugInfo {
-  font-size: 40px;
+.title h1, .title h2, .title p, .title a {
+    color: #fff;
+    text-align: center;
 }
 
-.medicationCalendarScroll {
-display: flex;
-flex-direction: row;
-overflow: auto;
-white-space: nowrap;
+.title p {
+    line-height: 1.5em;
+}
+
+.title a {
+    text-decoration: none;
+}
+
+.bkgd-overlay {
+    background: rgba(34, 80, 95, 0.87);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.register-button, .login-button {
+    padding:12px 10px;
+    border:solid 3px #fff;
+    border-radius: 3px;
+    width:200px;
+    display: block;
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+a.register-button {
+    background:#FFA64B;
+    border-color: rgba(255,255,255,0.0);
+}
+
+.manage-button {
+    padding:12px 10px;
+    border:solid 3px #fff;
+    color: #fff;
+    border-radius: 3px;
+    width:200px;
+    display: block;
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.doctor-content {
+    background: #14568D;
+    padding:30px 0 50px 0;
+}
+
+.doctor-content h2 {
+    text-align: center;
+    color: #fff;
+}
+
+@media only screen and (min-width:980px) {
+    .title {
+        max-width: 400px;
+    }
+
+    .title, .title h1, .title h2, .title p {
+        text-align: left;
+    }
+
+    .register-button, .login-button {
+        margin-left: 0;
+    }
+
+    .bkgd-overlay {
+        background:rgba(34, 80, 95, 0.6);
+    }
+
+    .main-content {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #main-header h3 {
+        text-align: left;
+        padding-left: 10%;
+    }
+}
+
+@media only screen and (max-width:720px) {
+    .main-content {
+        background-image:url('images/grandma-mobile.jpg');
+    }
+}
+
+/* SETTINGS
+------------------------------------------------------- */
+
+.back-button {
+    width:100%;
+    color: rgba(255, 255, 255, 0.63);
+    background:#14568D;
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.SettingsHeader {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.settingsForm {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.notificationsForm {
+    font-size: 18px;
+}
+
+.notificationsForm h3, .updateCreds h3 {
+    text-transform: uppercase;
+    color: #14568D;
+    font-size: 27px;
+}
+
+.notification-desc {
+    font-size: 18px;
+    color:#777;
+    line-height: 1.4em;
+}
+
+.phone {
+    display: none;
+    font-size: 16px;
+    color:#777;
+}
+
+.phone.show {
+    display: block;
+}
+
+.settingsForm input {
+    margin-bottom: 10px;
+}
+
+.settingsForm input, .updateCreds input {
+    border: solid 1px #000;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.updateCreds input {
+    margin-bottom: 15px;
+    padding:10px;
+    width: 100%;
+}
+
+.save-button {
+    margin:auto;
+    background: #FFA64B;
+    color: #fff;
+    border:none;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:15px 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media only screen and (min-width:980px) {
+    .settingsForm {
+        max-width: 600px;
+    }
+}
+
+
+/* USER PROFILE
+------------------------------------------------------- */
+
+.header-bar {
+    background-color: #14568D;
+    background-color: #40ACDC;
+    text-align: right;
+    padding:10px;
+    box-shadow: 0 1px 12px 2px rgba(0,0,0,0.4);
+    background: rgb(38,126,181);
+background: -moz-linear-gradient(left, rgba(38,126,181,1) 0%, rgba(64,172,220,1) 100%);
+background: -webkit-linear-gradient(left, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
+background: linear-gradient(to right, rgba(38,126,181,1) 0%,rgba(64,172,220,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', endColorstr='#40acdc',GradientType=1 );
+}
+
+.header-bar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-bar li {
+    list-style: none;
+    display: inline-block;
+}
+
+.header-bar li a {
+    padding:13px 25px;
+    border-radius: 50px;
+    background:rgba(255,255,255,0.1);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: block;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+.header-bar li a:hover {
+    background: rgba(255,255,255,0.3);
 }
 
 .daysOfWeek {
-  font-size: 200px;
-  display: inline-block;
-  padding: 10%;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .daysOfWeek a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: #000;
+    padding:20px 25px;
+    background:rgba(0,0,0,0.1);
+    display: block;
+    transition: all ease 0.3s;
+    margin:10px 0;
+    font-size: 18px;
 }
 
-/*Settings*/
+.daysOfWeek a:hover {
+    background:rgba(0,0,0,0.2);
+}
+
+.daysOfWeek a.active {
+    background:#FFA64B;
+    color: #fff;
+    padding:25px 30px;
+    margin:0;
+}
+
+#medications-section {
+    display: inline-block;
+    width:70%;
+    background:#f1f1f1;
+    min-height: 100vh;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+}
+
+#medications-section h1 {
+    width:80%;
+    margin: auto;
+    margin-top:20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+.medicationCalendarScroll {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.header-bar li a.profile {
+    background-image: url(images/grandma-mobile.jpg)!important;
+    background-size: cover!important;
+    box-sizing: border-box;
+    width: 41px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.medication {
+    background:#fff;
+    display: block;
+    margin:auto;
+    width:80%;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 17px -3px rgba(0,0,0,0.2);
+}
+
+.medications-title {
+    text-align: center;
+}
+
+.medications-title h3 {
+    text-align: center;
+    margin-top:0;
+    color: #666;
+}
+
+.drugName {
+    font-size: 21px;
+}
+
+.drugInfo {
+    color: #aaa;
+}
+
+#profile-section {
+    width: 30%;
+    float: right;
+    background: #14568D;
+    box-sizing: border-box;
+    height: 100%;
+    color: #fff;
+    min-height: 100vh;
+}
+
+#profile-section h2 {
+    margin-bottom: 5px;
+}
+
+#profile-section h3 {
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: solid 2px rgba(255,255,255,0.5);
+    font-size: 17px;
+    margin-top:35px;
+}
+
+.contraindicators, .profile-info {
+    padding: 20px;
+}
+
+.contraindicators {
+    background-color: rgba(0,0,0,0.2);
+    /*background-color: #FFA64B;*/
+}
+
+.contraindicators h3 {
+    margin-top:15px!important;
+}
+
+.edit-profile {
+    margin: 0;
+}
+
+.edit-profile a {
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.edit-profile a:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+@media only screen and (max-width:980px) {
+    #medications-section {
+        width: 100%;
+    }
+
+    #medications-section h1 {
+        font-size: 30px;
+    }
+
+    .medicationCalendarScroll {
+        padding:15px 5%;
+    }
+
+    .daysOfWeek {
+        width:13%;
+    }
+
+    .daysOfWeek a, .daysOfWeek a.active {
+        padding:20px 0!important;
+        width:100%!important;
+        margin:0!important;
+    }
+
+    .medication {
+        width:90%;
+    }
+
+    #profile-section {
+        display: none;
+    }
+}

@@ -1,14 +1,15 @@
-fetch(`https://rxnav.nlm.nih.gov/REST/rxcui.json?name=omeprazole`) // use QuerySelector to get and set drug search
-  .then(function (response) {
-    return response.json();
-}).then(function (json) {
-    return json.idGroup.rxnormId[0];
-}).then(function (medID) {
-  fetch(`https://rxnav.nlm.nih.gov/REST/interaction/interaction.json?rxcui=${medID}&sources=ONCHigh`)
-    .then(function (res2) {
-      return res2.json();
-  }).then(function (contra) {
-      var contraDrug = contra.interactionTypeGroup[0].interactionType[0].interactionPair[0].description;
-      console.log(contraDrug);
-  })
-})
+console.log("is this on?")
+
+document.getElementById("patientsTab").onclick = function() {patientTabPopulate()};
+
+function patientTabPopulate() {
+    alert("Hey this is patient tab");
+}
+
+document.getElementById("patientSearchForm").onsubmit = function() {patientSearch()};
+
+function patientSearch() {
+    alert("The form was submitted");
+}
+
+document.getElementById("patientSearchForm").onclick = function() {patientSearch()};
