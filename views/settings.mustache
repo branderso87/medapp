@@ -5,28 +5,38 @@
     <title>Settings</title>
   </head>
   <body>
-    <span class="SettingsHeader"> Settings</span>
+  <a href="#" class="back-button">< Back</a>
     <div class="settingsForm">
+    <h1 class="SettingsHeader">Settings</h1>
       <div class="notificationsForm">
+        <h3>Notifications</h3>
+        <p class="notification-desc">Set your notification settings to get reminders to take your medication from different devices.</p>
         <input type="checkbox" name="alexaNotification" value="">Alexa
         <br>
         <input type="checkbox" name="emailNotification" value="">Email
         <br>
-        <input type="checkbox" name="textmessNotification" value="">Text Message
+        <input type="checkbox" name="textmessNotification" value="" id="textMsg">Text Message
         <br>
-        <input type="text" name="phoneNumber" placeholder="Type phone number here">
+        <div class="phone">What's your phone number? <input type="text" name="phoneNumber"></div>
         <br>
       </div>
       <div class="updateCreds">
-<input type="text" name="oldUserName" placeholder="Current Username">
-<br>
-<input type="text" name="newUserName" placeholder="New Username">
+      <h3>Profile Info</h3>
+<input type="text" name="oldUserName" placeholder="barbara1947@aol.com">
 <br>
 <input type="text" name="oldPassword" placeholder="Current Password">
 <br>
-<input type="text" name="newPassword" placeholder="newPassword">
+<input type="text" name="newPassword" placeholder="New Password">
       </div>
-      <button type="submit" name="button">Save Settings</button>
+      <button type="submit" name="button" class="save-button">Save Settings</button>
     </div>
+
+    <script>
+
+    $('#textMsg').click( function() {
+        $('.phone').toggleClass('show');
+    });
+
+    </script>
   </body>
 </html>
