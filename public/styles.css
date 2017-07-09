@@ -27,7 +27,7 @@ body {
 h1.login {
     margin:0;
     color: #fff;
-    font-size: 45px;
+    font-size: 65px;
     font-weight: 300;
     margin-bottom: 15px;
 }
@@ -80,24 +80,6 @@ h1.login {
     opacity: 1.0;
 }
 
-@media only screen and (max-width:720px) {
-    .login-screen-wrapper {
-        background-image:url('images/login-mobile.jpg');
-    }
-}
-
-@media only screen and (min-width:720px) {
-    .login-box {
-        width:40%;
-        margin:0 30%;
-    }
-
-    .signup-screen-wrapper .login-box {
-        width:90%;
-        margin:0 10%;
-    }
-}
-
 .signup-screen-wrapper {
     width:100%;
     height:auto;
@@ -147,24 +129,202 @@ h1.login {
     width:auto;
 }
 
+@media only screen and (max-width:720px) {
+    .login-screen-wrapper {
+        background-image:url('images/login-mobile.jpg');
+    }
+}
+
+@media only screen and (min-width:720px) {
+    .login-box, .signup-box {
+        width:40%;
+        margin:0 30%;
+    }
+
+    .signup-screen-wrapper .login-box {
+        width:90%;
+        margin:0 10%;
+    }
+}
+
 
 /* HOME
 ------------------------------------------------------- */
 
-.header {
+#main-header {
+    width: 100%;
+    margin: 0;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#main-header h3 {
+    text-align:center;
+    color:rgba(34, 80, 95, 1.0);
+}
+
+.main-content {
+    background:url('images/grandma.jpg');
+    background-position: right;
+    background-size: cover;
+    padding: 100px 0 50px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.title {
+    position: relative;
+    width:80%;
+    margin:0 10%;
+    text-align: center;
+}
+
+.title h1, .title h2, .title p, .title a {
+    color: #fff;
+    text-align: center;
+}
+
+.title p {
+    line-height: 1.5em;
+}
+
+.title a {
+    text-decoration: none;
+}
+
+.bkgd-overlay {
+    background: rgba(34, 80, 95, 0.87);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.register-button, .login-button {
+    padding:12px 10px;
+    border:solid 3px #fff;
+    border-radius: 3px;
+    width:200px;
     display: block;
-    position: relative;
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+a.register-button {
+    background:#FFA64B;
+    border-color: rgba(255,255,255,0.0);
+}
+
+.manage-button {
+    padding:12px 10px;
+    border:solid 3px #000;
+    color: #000;
+    border-radius: 3px;
+    width:200px;
+    display: block;
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.doctor-content h2 {
+    text-align: center;
+}
+
+@media only screen and (min-width:980px) {
+    .title {
+        max-width: 400px;
+    }
+
+    .title, .title h1, .title h2, .title p {
+        text-align: left;
+    }
+
+    .register-button, .login-button {
+        margin-left: 0;
+    }
+
+    .bkgd-overlay {
+        background:rgba(34, 80, 95, 0.6);
+    }
+
+    .main-content {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #main-header h3 {
+        text-align: left;
+        padding-left: 10%;
+    }
+}
+
+/* SETTINGS
+------------------------------------------------------- */
+
+.SettingsHeader {
     width:100%;
-    background:#fff;
+    color: #fff;
+    background:blue;
+    display: block;
+    padding: 15px;
+    font-size: 23px;
 }
 
-.logo {
-    position: relative;
-    max-height: 50px;
+.settingsForm {
+    padding: 15px;
+    width: 100%;
 }
 
-.navigation {
-    float: left;
+.notificationsForm {
+    font-size: 18px;
+}
+
+.phone {
+    display: none;
+    color: #555;
+}
+
+.phone.show {
+    display: block;
+}
+
+.settingsForm input {
+    margin-bottom: 10px;
+}
+
+.settingsForm input, .updateCreds input {
+    border: solid 1px #000;
+    font-size: 16px;
+}
+
+.updateCreds input {
+    margin-bottom: 15px;
+    padding:10px;
+    width: 100%;
+}
+
+.save-button {
+    margin:auto;
+    background: #FFA64B;
+    color: #fff;
+    border:none;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding:15px 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
 }
 
 
@@ -225,5 +385,3 @@ white-space: nowrap;
   text-decoration: none;
   color: black;
 }
-
-/*Settings*/
