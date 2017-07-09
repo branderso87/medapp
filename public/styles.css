@@ -705,3 +705,80 @@ a.register-button {
 .info-section.active {
     display: block;
 }
+
+
+/*Add Medication Page*/
+
+.addmedsbody {
+  background-color: #F1F1F1;
+}
+
+.addmedicationSection h1{
+  width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+.addmedicationSection button {
+  background: #FFA64B;
+color: #fff;
+border: none;
+font-weight: 700;
+text-transform: uppercase;
+padding: 15px 10px;
+font-size: 18px;
+letter-spacing: 3px;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.addmedicationSection form {
+  width: 40%;
+    margin: 0 30%;
+    text-align: center;
+    padding-top: 15vh;
+        position: relative;
+}
+
+.medicationNameCard {
+  background: #fff;
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 17px -3px rgba(0,0,0,0.2);
+}
+
+.dayCard {
+  background: #fff;
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 17px -3px rgba(0,0,0,0.2);
+}
+
+.medicationdescriptionCard {
+  background: #fff;
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 17px -3px rgba(0,0,0,0.2);
+}
+
+.medicationdescriptionCard textarea {
+  border: none;
+  text-align: center;
+}
+
+.dayCard
