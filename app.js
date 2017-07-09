@@ -3,28 +3,36 @@ const mustache = require('mustache-express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 var app = express();
-let user=false;
-var session = require('express-session')
 
-app.engine('mustache', mustache() )
+const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost:27017/medAppDB');
+
+const User = require("./models/User")
+
+app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-}))
 
 app.listen(3000, function() {
   console.log("Is this thing on?")
 });
 
 app.get("/", function(req,res) {
-
-  res.render('home')
+  // const user = new User( // puts a false Barbara Johnson user into the Users collection
+  //   {firstName: "Barbara",
+  //   lastName: "Johnson",
+  //   dob: "1950-07-08",
+  //   email: "barbara.johnson@email.com",
+  //   memberId: 123456789,
+  //   cardholder: true});
+  //   user.save()
+  //   .then(function (newUser) {
+      // response.redirect("/");
+      res.render('home');
+    // });
 })
 
 app.get("/login", function(req,res) {
