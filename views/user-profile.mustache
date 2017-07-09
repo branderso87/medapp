@@ -6,64 +6,149 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-<nav>
-  <div class="iconList">
-    <a href="#">
-      <div class="icon">
-
+    <div class="header-bar">
+        <ul>
+            <li>
+                <a href="#">+ Add Medication</a>
+            </li>
+            <li>
+                <a href="#" class="profile">&nbsp;</a>
+            </li>
+        </ul>
     </div>
-    </a>
-    <a href="#">
-      <div class="icon">
-
+    <div id="medications-section">
+        <h1>My Medications</h1>
+        <div class="medicationCalendarScroll">
+            <div class="medications-title">
+                <h3>Days of the Week:</h3>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="sun"><span>Sun</span></a>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="mon" class="active"><span>Mon</span></a>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="tue"><span>Tue</span></a>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="wed"><span>Wed</span></a>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="thu"><span>Thu</span></a>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="fri"><span>Fri</span></a>
+            </div>
+            <div class="daysOfWeek">
+                <a href="#" id="sat"><span>Sat</span></a>
+            </div>
+        </div>
+        <div class="medication">
+            <span class="drugName">Drug Name</span><br>
+            <span class="drugInfo">Drug Info</span>
+        </div>
+        <div class="medication"></div>
+        <div class="medication"></div>
+        <div class="medication"></div>
+        <div class="medication"></div>
     </div>
-    </a>
-    <a href="#">
-      <div class="icon">
+      <div id="profile-section">
 
-    </div>
-    </a>
-  </div>
-</nav>
-<div class="medicationCalendarScroll">
-<div class="daysOfWeek">
-<a href="#" id="monday"><span>M</span></a>
-</div>
-<div class="daysOfWeek">
-<a href="#"><span>T</span></a>
-</div>
-<div class="daysOfWeek">
-<a href="#"><span>W</span></a>
-</div>
-<div class="daysOfWeek">
-<a href="#"><span>Th</span></a>
-</div>
-<div class="daysOfWeek">
-<a href="#"><span>F</span></a>
-</div>
-<div class="daysOfWeek">
-<a href="#"><span>S</span></a>
-</div>
-<div class="daysOfWeek">
-<a href="#"><span>Su</span></a>
-</div>
-</div>
-<div class="medication">
-<span class="drugName">Drug Name</span>
-<br>
-<span class="drugInfo">Drug Info</span>
-</div>
-<div class="medication">
+          <div class="contraindicators">
+              <h3>Contraindicators</h3>
+              <p>Thing 1</p>
+              <p>Thing 2</p>
+          </div>
 
-</div>
-<div class="medication">
+          <div class="profile-info">
+              <h2>Barbara Johnson</h2>
+              <p class="edit-profile"><a href="settings.mustache">Edit Profile</a></p>
 
-</div>
-<div class="medication">
+              <h3>Allergies</h3>
+              <p>Peanuts</p>
+              <p>Fun</p>
 
-</div>
-<div class="medication">
+              <h3>Doctors</h3>
+              <p>Dr. Gregory House</p>
+              <p>Dr. Perry Cox</p>
 
-</div>
+          </div>
+      </div>
+
+      <script>
+
+          $('#sun').click(function() {
+              $('#sun').addClass('active');
+              $('#mon').removeClass('active');
+              $('#tue').removeClass('active');
+              $('#wed').removeClass('active');
+              $('#thu').removeClass('active');
+              $('#fri').removeClass('active');
+              $('#sat').removeClass('active');
+          });
+
+          $('#mon').click(function() {
+              $('#sun').removeClass('active');
+              $('#mon').addClass('active');
+              $('#tue').removeClass('active');
+              $('#wed').removeClass('active');
+              $('#thu').removeClass('active');
+              $('#fri').removeClass('active');
+              $('#sat').removeClass('active');
+          });
+
+          $('#tue').click(function() {
+              $('#sun').removeClass('active');
+              $('#mon').removeClass('active');
+              $('#tue').addClass('active');
+              $('#wed').removeClass('active');
+              $('#thu').removeClass('active');
+              $('#fri').removeClass('active');
+              $('#sat').removeClass('active');
+          });
+
+          $('#wed').click(function() {
+              $('#sun').removeClass('active');
+              $('#mon').removeClass('active');
+              $('#tue').removeClass('active');
+              $('#wed').addClass('active');
+              $('#thu').removeClass('active');
+              $('#fri').removeClass('active');
+              $('#sat').removeClass('active');
+          });
+
+          $('#thu').click(function() {
+              $('#sun').removeClass('active');
+              $('#mon').removeClass('active');
+              $('#tue').removeClass('active');
+              $('#wed').removeClass('active');
+              $('#thu').addClass('active');
+              $('#fri').removeClass('active');
+              $('#sat').removeClass('active');
+          });
+
+          $('#fri').click(function() {
+              $('#sun').removeClass('active');
+              $('#mon').removeClass('active');
+              $('#tue').removeClass('active');
+              $('#wed').removeClass('active');
+              $('#thu').removeClass('active');
+              $('#fri').addClass('active');
+              $('#sat').removeClass('active');
+          });
+
+          $('#sat').click(function() {
+              $('#sun').removeClass('active');
+              $('#mon').removeClass('active');
+              $('#tue').removeClass('active');
+              $('#wed').removeClass('active');
+              $('#thu').removeClass('active');
+              $('#fri').removeClass('active');
+              $('#sat').addClass('active');
+          });
+
+      </script>
+
   </body>
 </html>

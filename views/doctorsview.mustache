@@ -7,16 +7,17 @@
   <body>
     <nav>
       <ul>
-        <a href="#"><li>Patients</li></a>
+        <a href="#" id="patientsTab"><li>Patients</li></a>
         <a href="#"><li>Refills</li></a>
         <a href="#"><li>Authorization</li></a>
       </ul>
     </nav>
-    <form class="" action="index.html" method="post">
-      <input type="text" name="" placeholder="Search for patients...">
+    <div class="patientT"
+    <form class="" action="/doctorsSearch" method="post" id="patientSearchForm">
+      <input type="text" name="searchBar"  placeholder="Search for patients...">
       <button type="submit" name="button">Search</button>
     </form>
-    <div class="patientsResults">
+    <div id="patientsResults">
 
     </div>
     <div class="refillsResults">
@@ -25,5 +26,6 @@
     <div class="authorizationResults">
 
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

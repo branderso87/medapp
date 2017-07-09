@@ -46,3 +46,13 @@ app.get("/settings",function(req,res){
 
   res.render('settings')
 })
+
+app.get("/doctorsview",function(req,res){
+
+  res.render('doctorsview')
+})
+
+app.post("/doctorsSearch", function(req,res) {
+  
+  res.render('doctorsview')
+})
