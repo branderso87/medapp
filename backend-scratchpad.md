@@ -43,3 +43,5 @@ Relations
 // Doctors table will have special permissions and access and views
 // Users table will have the following columns: firstName, lastName, dob, emailAddress, memberId, cardholder(boolean), medicationId(foreignKey), medNickname?(maybe)
 // Medication Table will have: name, rxcui
+
+// QuerySelector must pull medication name from Patient(User) detail page, then use fetch API to convert that string into a rxcui, which is a number.
