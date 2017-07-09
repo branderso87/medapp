@@ -465,7 +465,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     background-image: url(images/grandma-mobile.jpg)!important;
     background-size: cover!important;
     box-sizing: border-box;
-    width: 41px;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -479,6 +478,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#267eb5', end
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 4px 17px -3px rgba(0,0,0,0.2);
+}
+
+.medication a {
+  padding: 13px 25px;
+border-radius: 50px;
+background-color: #369ACD;
+color: #fff;
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: 1px;
+font-size: 13px;
+display: block;
+text-decoration: none;
+transition: all ease 0.3s;
+width: 15em;
+margin-right: 0;
 }
 
 .medications-title {
