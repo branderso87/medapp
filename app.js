@@ -21,9 +21,8 @@ app.listen(3000, function() {
   console.log("Is this thing on?")
 });
 
-
 app.get("/", function(req,res) {
-  
+
   // const med = new Med( // puts a false Morphine med into the Medications collection
   //   {name: "Morphine"}
   // );
