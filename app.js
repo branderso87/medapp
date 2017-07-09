@@ -8,7 +8,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost:27017/medAppDB');
 
-const User = require("./models/User")
+const User = require("./models/User");
+const Med = require("./models/Medication")
 
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
@@ -20,7 +21,18 @@ app.listen(3000, function() {
   console.log("Is this thing on?")
 });
 
+
 app.get("/", function(req,res) {
+  
+  // const med = new Med( // puts a false Morphine med into the Medications collection
+  //   {name: "Morphine"}
+  // );
+  // med.save()
+  // .then(function(newMed){
+  //   console.log('New med added to DB.');
+    res.render('home');
+  // })
+
   // const user = new User( // puts a false Barbara Johnson user into the Users collection
   //   {firstName: "Barbara",
   //   lastName: "Johnson",
@@ -31,7 +43,6 @@ app.get("/", function(req,res) {
   //   user.save()
   //   .then(function (newUser) {
       // response.redirect("/");
-      res.render('home');
     // });
 })
 
