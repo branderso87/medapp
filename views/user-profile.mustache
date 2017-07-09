@@ -50,19 +50,35 @@
         </div>
         <div class="medication">
             <span class="drugName">Omeprazole</span><br>
-            <span class="drugInfo">Treat heartburn, a damaged esophagus, stomach ulcers,<br> and gastroesophageal reflux disease </span>
-            <a href="#">Request a Refill</a>
+            <span class="time active">8:00 a.m.</span><span class="time">2:00 p.m.</span><span class="time">9:00 p.m.</span><br>
+            <span class="drugInfo">Treat heartburn, a damaged esophagus, stomach ulcers, and gastroesophageal reflux disease.</span>
+            <a href="#" class="refill">Request a Refill</a>
         </div>
-        <div class="medication"></div>
-        <div class="medication"></div>
-        <div class="medication"></div>
-        <div class="medication"></div>
+        <div class="medication">
+            <span class="drugName">Lipitor</span><br>
+            <span class="time active">8:00 a.m.</span><span class="time">7:00 p.m.</span><br>
+            <span class="drugInfo">It can treat high cholesterol and triglyceride levels. This may reduce the risk of angina, stroke, heart attack, and heart and blood vessel problems.</span>
+            <a href="#" class="refill">Request a Refill</a>
+        </div>
+        <div class="medication">
+            <span class="drugName">Nexium</span><br>
+            <span class="time">9:00 p.m.</span><br>
+            <span class="drugInfo">It can treat gastroesophageal reflux disease (GERD). It can also lower the risk of bleeding after endoscopy in patients with ulcers.</span>
+            <a href="#" class="refill">Request a Refill</a>
+        </div>
+        <div class="medication">
+            <span class="drugName">Plavix</span><br>
+            <span class="time">2:00 p.m.</span><br>
+            <span class="drugInfo">It can prevent stroke, heart attack, and other heart problems.</span>
+            <a href="#" class="refill">Request a Refill</a>
+        </div>
     </div>
       <div id="profile-section">
 
           <div class="contraindicators">
               <h3>Drug Interactions</h3>
-              <p class="contraindicator-1"></p>
+              <p>Thing 1</p>
+              <p>Thing 2</p>
           </div>
 
           <div class="profile-info">
@@ -81,6 +97,10 @@
       </div>
 
       <script>
+
+          $('.time').click( function() {
+              $(this).toggleClass('active');
+          });
 
           $('#sun').click(function() {
               $('#sun').addClass('active');
@@ -154,6 +174,5 @@
 
       </script>
 
-      <script src="contradrug.js" charset="utf-8"></script>
   </body>
 </html>
