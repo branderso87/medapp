@@ -159,6 +159,7 @@ h1.login {
     top: 0;
     left: 0;
     z-index: 999;
+    padding: 20px 0;
 }
 
 #main-header h3 {
@@ -819,6 +820,13 @@ cursor: pointer;
     box-shadow: 0 4px 17px -3px rgba(0,0,0,0.2);
 }
 
+.medicationNameCard input {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
+}
+
 .dayCard {
   background: #fff;
     display: block;
@@ -842,8 +850,16 @@ cursor: pointer;
 }
 
 .medicationdescriptionCard textarea {
-  border: none;
   text-align: center;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
 }
 
-.dayCard
+.dayCard select {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
+}

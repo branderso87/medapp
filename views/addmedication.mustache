@@ -4,15 +4,20 @@
     <meta charset="utf-8">
     <title>Add a new medication</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
   <body class="addmedsbody">
     <div class="header-bar">
         <ul>
             <li>
-                <a href="/userprofile"> Profile</a>
+                <a href="/userprofile">Profile</a>
             </li>
-            <li>
-                <a href="/login" class="profile">Logout</a>
+            <li class="profile-list-item">
+                <a href="/login" class="profile">&nbsp;</a>
+                <ul class="submenu">
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/">Logout</a></li>
+                </ul>
             </li>
         </ul>
     </div>
