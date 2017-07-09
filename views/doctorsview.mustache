@@ -5,27 +5,83 @@
     <title>Doctors View</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <a href="#" id="patientsTab"><li>Patients</li></a>
-        <a href="#"><li>Refills</li></a>
-        <a href="#"><li>Authorization</li></a>
-      </ul>
-    </nav>
-    <div class="patientT"
-    <form class="" action="/doctorsSearch" method="post" id="patientSearchForm">
-      <input type="text" name="searchBar"  placeholder="Search for patients...">
-      <button type="submit" name="button">Search</button>
-    </form>
-    <div id="patientsResults">
-
+    <div class="header-bar">
+        <ul>
+            <li>Dr. Gregory House <a class="profile doctor" href="#">&nbsp;</a></li>
+        </ul>
     </div>
-    <div class="refillsResults">
-
+      <div id="doctor-wrapper">
+        <nav id="nav-list">
+            <div>
+                <ul>
+                    <li class="patient-selector active">Patients</li>
+                    <li class="refill-selector">Refills</li>
+                    <li class="authorization-selector">Authorization</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="patientT info-section active">
+            <form action="/doctorsSearch" class="" id="patientSearchForm" method="post" name="patientSearchForm">
+                <input name="searchBar" placeholder="Search for patients..." type="text"> <button name="button" type="submit">Search</button>
+            </form>
+            <div id="patientsResults"></div>
+            <div class="refillsResults"></div>
+            <div class="authorizationResults"></div>
+            <script src="app.js">
+            </script>
+        </div>
+          <div class="refillsT info-section">
+              <p>Medication</p>
+              <p>Medication</p>
+              <p>Medication</p>
+              <p>Medication</p>
+              <p>Medication</p>
+              <p>Medication</p>
+              <p>Medication</p>
+          </div>
+          <div class="authorizationT info-section">
+              <p>Authorization</p>
+              <p>Authorization</p>
+              <p>Authorization</p>
+              <p>Authorization</p>
+              <p>Authorization</p>
+              <p>Authorization</p>
+              <p>Authorization</p>
+          </div>
     </div>
-    <div class="authorizationResults">
 
-    </div>
-    <script src="app.js"></script>
+      <script>
+
+          $('.patient-selector').click( function() {
+              $('.patientT').addClass('active');
+              $('.refillsT').removeClass('active');
+              $('.authorizationT').removeClass('active');
+
+              $('.patient-selector').addClass('active');
+              $('.refill-selector').removeClass('active');
+              $('.authorization-selector').removeClass('active');
+          });
+
+          $('.refill-selector').click( function() {
+              $('.patientT').removeClass('active');
+              $('.refillsT').addClass('active');
+              $('.authorizationT').removeClass('active');
+
+              $('.patient-selector').removeClass('active');
+              $('.refill-selector').addClass('active');
+              $('.authorization-selector').removeClass('active');
+          });
+
+          $('.authorization-selector').click( function() {
+              $('.patientT').removeClass('active');
+              $('.refillsT').removeClass('active');
+              $('.authorizationT').addClass('active');
+
+              $('.patient-selector').removeClass('active');
+              $('.refill-selector').removeClass('active');
+              $('.authorization-selector').addClass('active');
+          });
+
+      </script>
   </body>
 </html>

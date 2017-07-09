@@ -70,6 +70,11 @@ app.post("/userprofile",function(req,res){
   res.render('user-profile')
 })
 
+app.get("/addmedication",function(req,res){
+
+  res.render('addmedication')
+})
+
 app.get("/settings",function(req,res){
 
   res.render('settings')
