@@ -38,5 +38,9 @@
   "Users": {
     "dataSource": "db",
     "public": true
+  },
+  "Medications": {
+    "dataSource": "db",
+    "public": true
   }
 }
