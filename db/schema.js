@@ -41,7 +41,7 @@ const userSchema = new mongoose.Schema({
   }
 })
 
-model.exports = {
+module.exports = {
   User: mongoose.model('User', userSchema),
   Medication: mongoose.model('Medication', medSchema)
 }
