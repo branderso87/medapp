@@ -2,7 +2,7 @@ if [ "$1" = "mongo" ]
 	then
 		if pgrep mongo
 		  then
-		    kill $(pgrep mongo)
+		    kill $(pgrep mongod)
 		    echo "turning off mongo"
 		  else
 		    echo "mongo was not running"
