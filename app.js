@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost:27017/medAppDB');
 
-const User = require("./models/User");
-const Med = require("./models/Medication")
+const User = require("./db/schema").User;
+const Med = require("./db/schema").Medication
 
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
