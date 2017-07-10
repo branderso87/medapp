@@ -1,35 +1,34 @@
-const express = require('express');
-const mustache = require('mustache-express');
-const bodyParser = require('body-parser');
-const fs = require('fs');
-var app = express();
+const express = require('express')
+const mustache = require('mustache-express')
+const bodyParser = require('body-parser')
+const fs = require('fs')
+var app = express()
 
-const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost:27017/medAppDB');
+const mongoose = require('mongoose')
+mongoose.Promise = require('bluebird')
+mongoose.connect('mongodb://localhost:27017/medAppDB')
 
-const User = require("./db/schema").User;
-const Med = require("./db/schema").Medication
+const User = require('./db/schema').User
+const Med = require('./db/schema').Medication
 
-app.engine('mustache', mustache());
-app.set('view engine', 'mustache');
+app.engine('mustache', mustache())
+app.set('view engine', 'mustache')
 
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.listen(3000, function() {
-  console.log("Is this thing on?")
-});
+app.listen(3000, function () {
+  console.log('Is this thing on?')
+})
 
-app.get("/", function(req,res) {
-
+app.get('/', function (req, res) {
   // const med = new Med( // puts a false Morphine med into the Medications collection
   //   {name: "Morphine"}
   // );
   // med.save()
   // .then(function(newMed){
   //   console.log('New med added to DB.');
-    res.render('home');
+  res.render('home')
   // })
 
   // const user = new User( // puts a false Barbara Johnson user into the Users collection
@@ -45,46 +44,37 @@ app.get("/", function(req,res) {
     // });
 })
 
-app.get("/login", function(req,res) {
-
+app.get('/login', function (req, res) {
   res.render('login')
 })
-app.get("/userprofile", function(req,res) {
-
+app.get('/userprofile', function (req, res) {
   res.render('user-profile')
 })
 
-app.get("/signup", function(req,res) {
-
+app.get('/signup', function (req, res) {
   res.render('signup')
 })
 
-app.get("/userprofile",function(req,res){
-
+app.get('/userprofile', function (req, res) {
   res.render('user-profile')
 })
 
-app.post("/userprofile",function(req,res){
-
+app.post('/userprofile', function (req, res) {
   res.render('user-profile')
 })
 
-app.get("/addmedication",function(req,res){
-
+app.get('/addmedication', function (req, res) {
   res.render('addmedication')
 })
 
-app.get("/settings",function(req,res){
-
+app.get('/settings', function (req, res) {
   res.render('settings')
 })
 
-app.get("/doctorsview",function(req,res){
-
+app.get('/doctorsview', function (req, res) {
   res.render('doctorsview')
 })
 
-app.post("/doctorsSearch", function(req,res) {
-
+app.post('/doctorsSearch', function (req, res) {
   res.render('doctorsview')
 })
